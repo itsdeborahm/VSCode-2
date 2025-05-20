@@ -20,11 +20,43 @@ body {
   flex-wrap: wrap;
 }
 
+/* Novo container flexível para logo + botão */
+.menu-conteudo {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza conteúdo */
+  position: relative;      /* para posicionar botão absoluto */
+  align-items: center;
+}
+
+/* Logo centralizado */
 .logo {
   font-size: 24px;
   color: #fff;
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+  /* centraliza no container flex */
+  z-index: 2; /* para ficar acima do botão */
 }
 
+/* Botão do menu posicionado à direita, sobreposto */
+#menu-toggle {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 3;
+  /* alinhamento vertical */
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* padrão escondido */
+}
+
+/* Navegação padrão desktop */
 .navegação ul {
   list-style: none;
   display: flex;
@@ -42,6 +74,7 @@ body {
   text-decoration: none;
 }
 
+/* Seções e outros estilos (mantive seu CSS original) */
 #sobre {
   text-align: center;
   background: #F5F5F5;
@@ -236,7 +269,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Ajustes gerais para seção, rodapé e formulário */
   #formação,
   #experiências,
   #contato {
@@ -249,44 +281,22 @@ body {
     gap: 20px;
   }
 
-  /* Menu: logo e botão lado a lado */
-  #menu {
-    flex-direction: row;      /* linha, não coluna */
-    justify-content: space-between;
-    align-items: center;     /* centraliza verticalmente */
-    padding: 20px;
-    width: 100%;
-  }
-
-  .logo {
-    font-size: 24px;
-    color: #fff;
-    text-align: left;
-  }
-
-  .menu-toggle {
+  /* Mostrar botão no mobile */
+  #menu-toggle {
     display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    align-self: center;      /* centraliza verticalmente com logo */
   }
 
-  /* Navegação escondida inicialmente */
+  /* Esconder navegação inicialmente */
   .navegação {
     display: none;
     width: 100%;
     margin-top: 10px;
   }
 
-  /* Navegação visível quando ativa */
   .navegação.ativo {
     display: block;
   }
 
-  /* Menu da navegação */
   .navegação ul {
     flex-direction: column;
     align-items: flex-start;
@@ -341,21 +351,5 @@ body {
   .formação-lista p,
   .experiências-lista p {
     font-size: 18px;
-  }
-}
-
-/* === MENU HAMBÚRGUER (telas pequenas) === */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
   }
 }

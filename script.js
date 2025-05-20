@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (toggleButton && nav) {
     toggleButton.addEventListener('click', function () {
       const isActive = nav.classList.toggle('ativo');
-      toggleButton.setAttribute('aria-expanded', isActive);
+      toggleButton.setAttribute('aria-expanded', isActive ? "true" : "false");
     });
   }
 });
