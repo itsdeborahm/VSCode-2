@@ -12,51 +12,55 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+/* ====== ESTILO P/ DESKTOP ====== */
+
 #menu {
   display: flex;
   justify-content: space-between;
   background-color: #A7D3F3;
   padding: 25px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* se quiser, pode mudar para nowrap no desktop */
 }
 
-/* Novo container flexível para logo + botão */
+/* NO DESKTOP, .menu-conteudo não tem efeito, então escondemos para não quebrar layout */
 .menu-conteudo {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* centraliza conteúdo */
-  position: relative;      /* para posicionar botão absoluto */
-  align-items: center;
+  width: auto;
+  display: block;
+  position: static;
+  align-items: initial;
+  justify-content: initial;
 }
 
-/* Logo centralizado */
+/* Logo no desktop: alinhado à esquerda (por padrão) */
 .logo {
   font-size: 24px;
   color: #fff;
-  text-align: center;
-  flex: 1;
+  text-align: left;
   font-weight: bold;
-  /* centraliza no container flex */
-  z-index: 2; /* para ficar acima do botão */
+  flex: none; /* não ocupa espaço extra */
+  z-index: auto;
 }
 
-/* Botão do menu posicionado à direita, sobreposto */
+/* Botão menu escondido no desktop */
 #menu-toggle {
-  position: absolute;
-  right: 0;
-  background: none;
-  border: none;
+  display: none;
+  position: static;
   font-size: 28px;
   color: #fff;
+  background: none;
+  border: none;
   cursor: pointer;
-  z-index: 3;
-  /* alinhamento vertical */
-  top: 50%;
-  transform: translateY(-50%);
-  display: none; /* padrão escondido */
+  z-index: auto;
+  top: auto;
+  right: auto;
+  transform: none;
 }
 
-/* Navegação padrão desktop */
+/* Navegação desktop */
+.navegação {
+  display: block;
+}
+
 .navegação ul {
   list-style: none;
   display: flex;
@@ -74,7 +78,9 @@ body {
   text-decoration: none;
 }
 
-/* Seções e outros estilos (mantive seu CSS original) */
+/* ======== SEÇÕES E OUTROS ESTILOS ======= */
+
+/* (se mantém igual, seu CSS original aqui) */
 #sobre {
   text-align: center;
   background: #F5F5F5;
@@ -258,7 +264,7 @@ body {
   height: 80px;
 }
 
-/* === MEDIA QUERIES === */
+/* ====== MEDIA QUERIES ====== */
 
 @media (max-width: 1024px) {
   #formação,
@@ -269,6 +275,7 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Ajusta padding para telas pequenas */
   #formação,
   #experiências,
   #contato {
@@ -281,22 +288,53 @@ body {
     gap: 20px;
   }
 
-  /* Mostrar botão no mobile */
+  /* Mostrar botão hamburger */
   #menu-toggle {
     display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
   }
 
-  /* Esconder navegação inicialmente */
+  /* Container flexível para logo + botão no mobile */
+  .menu-conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centraliza logo */
+    position: relative;      /* para botão absoluto */
+    align-items: center;
+  }
+
+  /* Logo centralizada e ocupa máximo espaço */
+  .logo {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    z-index: 2; /* fica sobre o botão */
+  }
+
+  /* Navegação escondida por padrão */
   .navegação {
     display: none;
     width: 100%;
     margin-top: 10px;
   }
 
+  /* Navegação exibida ao ativar */
   .navegação.ativo {
     display: block;
   }
 
+  /* Menu em coluna no mobile */
   .navegação ul {
     flex-direction: column;
     align-items: flex-start;
