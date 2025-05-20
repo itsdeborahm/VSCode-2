@@ -1,0 +1,365 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #A7D3F3;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+}
+
+.navegação ul {
+  list-style: none;
+  display: flex;
+  color: #fff;
+}
+
+.navegação ul li {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navegação ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sobre {
+  text-align: center;
+  background: #F5F5F5;
+  padding: 60px 20px;
+}
+
+.sobre-imagem {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sobre-nome {
+  color: #6CB8E6;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.sobre-título {
+  color: #9C9C9C;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.sobre-descrição {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+#formação {
+  padding: 50px 150px;
+}
+
+.formação-título {
+  color: #49bfb3;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.formação-lista {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.formação-lista h3 {
+  font-size: 20px;
+  color: #7A7A7A;
+  margin-bottom: 10px;
+}
+
+.formação-lista a {
+  color: #6CB8E6;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.formação-lista p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+#experiências {
+  background: #F5F5F5;
+  padding: 50px 150px;
+}
+
+.experiências-título {
+  color: #49bfb3;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.experiências-lista {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.experiências-lista h3 {
+  font-size: 20px;
+  color: #7A7A7A;
+  margin-bottom: 10px;
+}
+
+.experiências-lista a {
+  color: #6CB8E6;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.experiências-lista p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+#contato {
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-título {
+  color: #49bfb3;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contato-formulário {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contato-grupoinput {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contato-input {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.contato-input input,
+.contato-input textarea {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+}
+
+.btn-enviar {
+  background-color: #A7D3F3;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rodapé {
+  background-color: #A7D3F3;
+  display: flex;
+  padding: 30px 40px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rodapé-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodapé-contatos a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.rodapé-contatos img {
+  vertical-align: middle;
+}
+
+.logo-minas {
+  height: 80px;
+}
+
+/* === MEDIA QUERIES === */
+
+@media (max-width: 1024px) {
+  #formação,
+  #experiências,
+  #contato {
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navegação ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navegação ul li {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  #formação,
+  #experiências,
+  #contato {
+    padding: 30px 20px;
+  }
+
+  .rodapé {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .sobre-nome {
+    font-size: 28px;
+  }
+
+  .sobre-título {
+    font-size: 20px;
+  }
+
+  .sobre-descrição {
+    font-size: 14px;
+  }
+
+  .formação-título,
+  .experiências-título,
+  .contato-título {
+    font-size: 26px;
+  }
+
+  .formação-lista h3,
+  .experiências-lista h3 {
+    font-size: 18px;
+  }
+
+  .formação-lista a,
+  .experiências-lista a,
+  .formação-lista p,
+  .experiências-lista p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  #menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .navegação ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegação ul li {
+    margin: 0;
+  }
+}
+
+/* === MENU HAMBÚRGUER === */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mostra o botão e esconde o menu normal em telas menores */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .navegação {
+    display: none;
+    width: 100%;
+  }
+
+  .navegação.ativo {
+    display: block;
+  }
+
+  .navegação ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navegação ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navegação ul li a {
+    display: block;
+    width: 100%;
+  }
+}

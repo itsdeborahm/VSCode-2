@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Déborah Machado</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header id="menu">
+        <h1 class="logo">Déborah Machado</h1>
+
+        <!-- Botão do menu hamburguer -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            &#9776;
+        </button>
+
+        <nav class="navegação">
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formação">Formação</a></li>
+                <li><a href="#experiências">Experiências</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Sobre -->
+        <section id="sobre">
+            <img class="sobre-imagem" src="Imagens/Imagem de uma lapiseira sobre papel.jpg"
+                alt="Imagem de uma lapiseira sobre papel" title="Imagem de uma lapiseira sobre papel" />
+            <h2 class="sobre-nome">Déborah Machado</h2>
+            <h3 class="sobre-título">Corretora de redação do Enem</h3>
+            <p class="sobre-descrição">
+                <strong>Formada em Letras</strong> e <strong>corretora de redações do Enem</strong>.
+                <br /> Atualmente, realizo um curso de introdução à programação,<br />
+                o que me possibilita integrar tecnologia e educação!
+            </p>
+        </section>
+
+        <!-- Seção Formação -->
+        <section id="formação">
+            <h2 class="formação-título">Formação</h2>
+            <div class="formação-lista">
+                <h3>Graduação em Letras na UFRJ</h3>
+                <a href="https://portal.letras.ufrj.br/" target="_blank">Universidade Federal do Rio de Janeiro</a>
+                <p>Graduação em Letras: português-inglês na UFRJ</p>
+
+                <h3>Curso de Programação</h3>
+                <a href="https://minasprogramam.com/" target="_blank">Instituto Minas Programam</a>
+                <p>Curso introdutório de desenvolvimento front-end, ensinando conceitos de HTML, CSS e JavaScript.</p>
+            </div>
+        </section>
+
+        <!-- Seção Experiências -->
+        <section id="experiências">
+            <h2 class="experiências-título">Experiências</h2>
+            <div class="experiências-lista">
+                <h3>Programa Salvaguarda</h3>
+                <a href="https://programasalvaguarda.com.br/redacao/" target="_blank">Programa Salvaguarda</a>
+                <p>Programa voluntário de correção de redação do Enem. Participei por 2 anos, ajudando alunos de forma
+                    humanizada e personalizada.</p>
+
+                <h3>Salva-vidas da redação</h3>
+                <a href="https://salvavidasdaredacao.com/" target="_blank">Salva-vidas da redação</a>
+                <p>Curso de redação em que atuei como corretora de redações no modelo Enem de forma freelancer durante 1
+                    ano e meio.</p>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h2 class="contato-título">Entre em contato comigo!</h2>
+            <form action="https://formspree.io/f/mblobwdb" method="POST" class="contato-formulário">
+                <div class="contato-grupoinput">
+                    <div class="contato-input">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" required />
+                    </div>
+
+                    <div class="contato-input">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required />
+                    </div>
+                </div>
+
+                <div class="contato-input">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem" rows="7"
+                        required></textarea>
+                </div>
+
+                <button class="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodapé">
+        <div class="rodapé-contatos">
+            <p>
+                <img src="Imagens/Símbolo do Instagram.png" alt="Logo do Instagram" title="Logo do Instagram" /> <a
+                    href="https://www.instagram.com/debsdailys/" target="_blank"><strong>debsdaily</strong></a>
+            </p>
+            <p><img src="Imagens/Símbolo 2 do github.png" alt="Logo do GitHub" title="Logo do GitHub" /> <a
+                    href="https://github.com/itsdeborahm" target="_blank"><strong>itsdeborahm</strong></a> </p>
+            <p><img src="Imagens/Símbolo 2 do linkedin.png" alt="Logo do LinkedIn" title="Logo do LinkedIn" /> <a
+                    href="https://www.linkedin.com/in/d%C3%A9borah-machado-6147b0255/" target="_blank"><strong>Déborah
+                    Machado</strong></a> </p>
+        </div>
+        <div class="rodapé-logo">
+            <a href="https://minasprogramam.com/">
+                <img class="logo-minas" src="Imagens/Símbolo do Minas Programam.png" alt="Logo do Minas Programam" />
+            </a>
+        </div>
+    </footer>
+
+    <!-- Script do menu hamburguer -->
+    <script src="script.js"></script>
+</body>
+
+</html>
