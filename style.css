@@ -236,23 +236,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  #menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .navegação ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navegação ul li {
-    margin: 10px 0;
-    font-size: 20px;
-  }
-
+  /* Ajustes gerais para seção, rodapé e formulário */
   #formação,
   #experiências,
   #contato {
@@ -263,6 +247,64 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
+
+  /* Menu: logo e botão lado a lado */
+  #menu {
+    flex-direction: row;      /* linha, não coluna */
+    justify-content: space-between;
+    align-items: center;     /* centraliza verticalmente */
+    padding: 20px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 24px;
+    color: #fff;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    align-self: center;      /* centraliza verticalmente com logo */
+  }
+
+  /* Navegação escondida inicialmente */
+  .navegação {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Navegação visível quando ativa */
+  .navegação.ativo {
+    display: block;
+  }
+
+  /* Menu da navegação */
+  .navegação ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegação ul li {
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .navegação ul li a {
+    display: block;
+    width: 100%;
+    color: #fff;
   }
 }
 
@@ -301,28 +343,8 @@ body {
     font-size: 18px;
   }
 }
-@media (max-width: 768px) {
-  #menu {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-  }
 
-  .navegação ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navegação ul li {
-    margin: 0;
-  }
-}
-
-/* === MENU HAMBÚRGUER === */
+/* === MENU HAMBÚRGUER (telas pequenas) === */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -332,34 +354,8 @@ body {
   cursor: pointer;
 }
 
-/* Mostra o botão e esconde o menu normal em telas menores */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    align-self: flex-end;
-  }
-
-  .navegação {
-    display: none;
-    width: 100%;
-  }
-
-  .navegação.ativo {
-    display: block;
-  }
-
-  .navegação ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navegação ul li {
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .navegação ul li a {
-    display: block;
-    width: 100%;
   }
 }
